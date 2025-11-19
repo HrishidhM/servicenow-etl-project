@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_incidents
+    columns:
+      - name: inc_number
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_incidents
+    columns:
+      - name: inc_number
+        tests:
+          - not_null
+
+  - name: incidents_summary
+    columns:
+      - name: total_tickets
+        tests:
+          - not_null
